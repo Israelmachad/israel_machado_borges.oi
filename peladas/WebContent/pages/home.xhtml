@@ -5,19 +5,42 @@
 	  xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"      
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.prime.com.tr/ui">
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:c="http://java.sun.com/jstl/core">
 	
-    <h:head>
-        <title>JSF 2.0 Hello World</title>
-    </h:head>
-    <h:body>
-    	<h:form>
-    	   <h:inputText value="#{peladas.value}"/>
-<!--     	   <h:commandButton value="Welcome Me" action="welcome"></h:commandButton> -->
-			<p:commandButton value="teste botao">
-				
-			</p:commandButton>
-			
-    	</h:form>
-    </h:body>
+   
+    <head>        
+        <title>Autenticação de Usuário</title>
+        <link href="${pageContext.request.contextPath}/css/layout.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1>Autenticação de Usuário</h1>
+        <c:if test="${mensagens.existeErros}">
+            <div id="erro">
+                <ul>
+                    <c:forEach var="erro" items="${mensagens.erros}">
+                        <li> ${erro} </li>
+                        </c:forEach>
+                </ul>
+            </div>
+        </c:if>
+        <form method="post" action="index.jsp">
+            <table>
+                <tr>
+                    <th>Login: </th>
+                    <td><input type="text" name="login"
+                               value="${param.login}"/></td>
+                </tr>
+                <tr>
+                    <th>Senha: </th>
+                    <td><input type="password" name="senha" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2"> 
+                        <input type="submit" name="bOK" value="Entrar"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
 </html>
