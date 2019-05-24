@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
+	
+   
+    <h:body>
+        <h1>Cadastrar Partida</h1>
+        <h:form>
+            <fieldset>
+                <legend>Dados da Partida</legend>
+                
+                 <h:panelGrid columns="2">
+                    <h:outputLabel value="Nome do Evento:" for="nomeEvento" />
+                    <h:inputText id="nomeEvento"  value="#{PartidaBean.Partida.nomeEvento}" />
+                    
+                    <h:outputLabel value="Local:" for="local" />
+                    <h:inputText id="local" value="#{PartidaBean.Partida.Local}" />
+                    
+                    <h:outputLabel value="Data:" for="data" />
+                    <h:inputText id="data" value="#{PartidaBean.Partida.data}" />
+                    
+                    <h:outputLabel value="Hora:" for="hora" />
+                    <h:inputText id="hora" value="#{PartidaBean.Partida.hora}" />
+                    
+                    <h:commandButton value="Limpar" />
+                    <h:commandButton value="Gravar" />
+                  </h:panelGrid>   
+                    
+            </fieldset>
+        </h:form>
+    </h:body>
+</html>
