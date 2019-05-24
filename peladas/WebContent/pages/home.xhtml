@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+<<<<<<< HEAD
 	  xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"      
       xmlns:h="http://java.sun.com/jsf/html"
@@ -43,4 +44,31 @@
             </table>
         </form>
     </body>
+=======
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.prime.com.tr/ui">
+
+
+
+<h:body>
+	<fieldset>
+
+		<h2>Login</h2>
+
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Usuário:" />
+			<h:inputText value="#{UsuarioBean.usuario}" size="20" />
+
+			<h:outputLabel value="Senha:" />
+			<h:inputSecret value="#{UsuarioBean.senha}" size="20" />
+
+			<h:commandButton value="Logar" action="#{UsuarioBean.logar}" />
+			<h:messages />
+
+		</h:panelGrid>
+		
+
+	</fieldset>
+</h:body>
+>>>>>>> branch 'master' of https://github.com/Israelmachad/israel_machado_borges.oi.git
 </html>
